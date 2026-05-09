@@ -2,10 +2,16 @@
 FrostOrthoをご購入いただきありがとうございます！  
 ガイドをご一読いただき、使用を開始してください。気に入っていただけましたら、X等で「#FrostOrtho」で宣伝いただけると大喜びします。  
 
-ご質問等ございましたら、muinoのXやdiscord、BoothのDMにてご連絡ください。サポートサーバーではご購入者様向けのお知らせをします。
+ご質問等ございましたら、muinoのXやdiscordのDMにてご連絡ください。  
+サポートサーバーではご購入者様向けのお知らせをしますのでよければご参加ください！
 - X：[@mui__key](https://x.com/mui__key)
-- Booth：[muino](https://muino.booth.pm/)
 - Discordサポートサーバー：[FrostOrthoSupport](https://discord.gg/swPe2Q3npJ)
+
+## バージョン
+- キーケット以前にご購入いただいた方  
+[v1.0.0](https://github.com/imo00o/zmk-config-FrostOrtho/tree/v1.0.0)
+- 2026年5月以降にご購入いただいた方  
+[v1.1.0(現main)](https://github.com/imo00o/zmk-config-FrostOrtho)
 
 ## ユーザーガイド
 - 組立済み品をご購入の方  
@@ -25,9 +31,12 @@ FrostOrthoをご購入いただきありがとうございます！
 
 ## 各種リンク
 - ケースデータ：[FrostOrtho-3dprint-data](https://github.com/imo00o/FrostOrtho-3dprint-data)  
-個人利用の範囲でしたらご自由に使用・改変いただけます。改変して頒布したいなどあればご相談ください。    
-- 基板データ：[FrostOrtho-pcb](https://github.com/imo00o/FrostOrtho-pcb)  
-トラックボール部分の設計など一部roBaを元に設計させていただきました。kuma_keyさんに大感謝です。  
+個人利用の範囲でしたらご自由に使用・改変いただけます。改変して頒布したいなどあればお気軽にご相談ください。    
+- 基板データ
+  - [FrostOrtho-pcb](https://github.com/imo00o/FrostOrtho-pcb)  
+  roBaの設計を参考に設計させていただきました。  
+  - [FrostOrtho-paw3222](https://github.com/imo00o/FrostOrtho-paw3222)  
+  badjeffさんの設計を参考にさせていただきました。  
 - 初期ファームウェア：[firmware](./firmware/)
   
 ## 互換性のあるキーキャップ・トラックボール
