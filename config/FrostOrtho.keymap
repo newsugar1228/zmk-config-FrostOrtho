@@ -61,12 +61,12 @@
             key-positions = <11 12>;
         };
 
-        MB1 {
+        leftclick {
             bindings = <&mkp MB1>;
             key-positions = <6 7>;
         };
 
-        MB2 {
+        rightclick {
             bindings = <&mkp MB2>;
             key-positions = <7 8>;
         };
@@ -76,7 +76,7 @@
             key-positions = <15 25>;
         };
 
-        MB4 {
+        backclick {
             bindings = <&mkp MB4>;
             key-positions = <8 9>;
         };
