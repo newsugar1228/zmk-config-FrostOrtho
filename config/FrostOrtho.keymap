@@ -244,10 +244,10 @@
 
         default_layer {
             bindings = <
-&lt 4 Q               &kp W         &kp E         &kp R               &kp T                          &kp Y        &kp U              &kp I         &kp O                      &kp P
-&kp A                 &kp S         &kp D         &mt LEFT_SHIFT F    &kp G                          &kp H        &mt RIGHT_SHIFT J  &mt LCTRL K   &mt LEFT_GUI L             &lt 5 MINUS
-&mt LEFT_SHIFT Z      &kp X         &kp C         &kp V               &kp B                          &kp N        &kp M              &kp COMMA     &kp PERIOD                 &mt RSHIFT SLASH
-&mt LEFT_CONTROL TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_MUHENKAN  &lt 2 SPACE  &lt 3 DELETE      &lt 2 ENTER  &kp BACKSPACE      &kp QUESTION  &mt RIGHT_ALT EXCLAMATION  &muhenkan_At
+&lt 4 Q               &kp W         &kp E         &kp R               &kp T                             &kp Y        &kp U              &kp I         &kp O                      &kp P
+&kp A                 &kp S         &kp D         &mt LEFT_SHIFT F    &kp G                             &kp H        &mt RIGHT_SHIFT J  &kp K         &mt LEFT_GUI L             &lt 5 MINUS
+&mt LEFT_SHIFT Z      &kp X         &kp C         &kp V               &kp B                             &kp N        &kp M              &kp COMMA     &kp PERIOD                 &mt RSHIFT SLASH
+&mt LEFT_CONTROL TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_MUHENKAN  &lt 2 SPACE  &lt 3 BACKSPACE      &lt 2 ENTER  &kp DELETE         &kp QUESTION  &mt RIGHT_ALT EXCLAMATION  &muhenkan_At
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -258,7 +258,7 @@
 &kp CARET            &kp HASH         &kp LS(EQUAL)       &kp DOLLAR           &kp PERCENT                           &kp KP_MINUS     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE
 &kp INTERNATIONAL_3  &kp EXCLAMATION  &muhenkan_underbar  &kp LC(KP_MULTIPLY)  &kp LS(LEFT_PARENTHESIS)              &kp KP_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ENTER
 &kp AT_SIGN          &kp AMPERSAND    &kp DOUBLE_QUOTES   &kp ASTERISK         &kp LS(N0)                            &kp KP_SLASH     &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD
-&trans               &trans           &trans              &trans               &trans                    &trans      &kp KP_ASTERISK  &kp KP_N0        &kp_00           &kp_equal        &kp COMMA
+&trans               &trans           &trans              &trans               &trans                    &trans      &kp KP_NUMBER_0  &kp_00           &kp KP_MULTIPLY  &kp_equal        &kp COMMA
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -268,8 +268,8 @@
             bindings = <
 &kp ESCAPE           &kp LS(LC(TAB))  &kp LS(F1)  &kp LC(R)   &Doc_Open                      &kp LS(NUMBER_3)  &kp LC(HOME)  &kp LG(LS(S))  &kp LC(END)  &kp BACKSPACE
 &kp LA(PRINTSCREEN)  &kp LC(S)        &kp LC(D)   &kp LC(N5)  &kp LC(SEMICOLON)              &kp LS(N2)        &kp HOME      &kp UP_ARROW   &kp END      &kp ENTER
-&kp LC(Z)            &kp LC(X)        &kp LC(C)   &kp LC(V)   &kp LC(B)                      &kp SEMICOLON     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
-&trans               &trans           &trans      &trans      &trans             &trans      &trans            &trans        &trans         &kp LS(F4)   &kp F2
+&mt LEFT_SHIFT Z     &kp LC(X)        &kp LC(C)   &kp LC(V)   &kp LC(B)                      &kp SEMICOLON     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
+&trans               &trans           &trans      &trans      &trans             &trans      &trans            &kp PG_UP     &kp PAGE_DOWN  &kp LS(F4)   &kp F2
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -288,10 +288,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &trans  &trans  &trans  &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans                      &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans                      &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans          &trans      &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
+&trans  &queryselect  &trans  &trans  &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans  &trans  &trans                      &trans        &trans        &trans        &trans        &trans
+&trans  &trans        &trans  &trans  &trans                      &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans  &trans  &trans          &trans      &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
