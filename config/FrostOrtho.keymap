@@ -288,10 +288,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE           &kp LS(LC(TAB))  &kp LS(F1)  &kp LC(R)   &Doc_Open                      &kp LS(NUMBER_3)  &kp LC(HOME)  &kp LG(LS(S))  &kp LC(END)  &kp BACKSPACE
-&kp LA(PRINTSCREEN)  &kp LC(S)        &kp LC(D)   &kp LC(N5)  &kp LC(SEMICOLON)              &kp LS(N2)        &kp HOME      &kp UP_ARROW   &kp END      &kp ENTER
-&mt LEFT_SHIFT Z     &kp LC(X)        &kp LC(C)   &kp LC(V)   &kp LC(B)                      &kp SEMICOLON     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
-&trans               &trans           &trans      &trans      &trans             &trans      &trans            &kp PG_UP     &kp PAGE_DOWN  &kp LS(F4)   &kp F2
+&kp ESCAPE        &kp LS(LC(TAB))  &kp LS(F1)  &kp LC(R)   &Doc_Open                      &kp LS(NUMBER_3)  &kp LC(HOME)  &kp LG(LS(S))  &kp LC(END)  &kp BACKSPACE
+&kp LC(A)         &kp LC(S)        &kp LC(D)   &kp LC(N5)  &kp LC(SEMICOLON)              &kp LS(N2)        &kp HOME      &kp UP_ARROW   &kp END      &kp ENTER
+&mt LEFT_SHIFT Z  &kp LC(X)        &kp LC(C)   &kp LC(V)   &kp LC(B)                      &kp SEMICOLON     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
+&trans            &trans           &trans      &trans      &trans             &trans      &trans            &kp PG_UP     &kp PAGE_DOWN  &kp LS(F4)   &kp F2
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -299,7 +299,7 @@
 
         FUNCTION {
             bindings = <
-&kp F13     &kp LS(LC(L))  &kp LC(F1)  &kp F11  &kp F12              &kp LS(LC(R))  &kp LS(LC(U))       &kp LS(LC(I))       &kp LS(LC(F13))    &kp LS(LC(P))
+&kp F13     &kp LS(LC(L))  &kp LC(F1)  &kp F11  &kp F12              &kp LS(LC(R))  &kp LS(LC(U))       &kp LS(LC(I))       &kp F13            &kp LS(LC(P))
 &kp F6      &kp F7         &kp F8      &kp F9   &kp F10              &trans         &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT)      &trans
 &kp LA(F1)  &kp F2         &kp F3      &kp F4   &kp F5               &trans         &kp LS(LG(LEFT))    &kp LG(DOWN_ARROW)  &kp LG(LS(RIGHT))  &trans
 &trans      &trans         &trans      &trans   &trans   &trans      &trans         &trans              &trans              &trans             &trans
