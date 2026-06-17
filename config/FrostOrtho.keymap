@@ -121,7 +121,7 @@
         };
 
         coron {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp APOSTROPHE>;
             key-positions = <5 6>;
         };
 
@@ -205,7 +205,7 @@
         queryselect: queryselect {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp STAR &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE>;
+            bindings = <&kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp DOUBLE_QUOTES &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE>;
             label = "QUERYSELECT";
         };
 
@@ -288,10 +288,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp LS(LC(TAB))  &kp LS(F1)  &kp LC(R)   &Doc_Open                      &kp LS(NUMBER_3)  &kp LC(HOME)  &kp LG(LS(S))  &kp LC(END)  &kp BACKSPACE
-&kp LC(A)         &kp LC(S)        &kp LC(D)   &kp LC(N5)  &kp LC(SEMICOLON)              &kp LS(N2)        &kp HOME      &kp UP_ARROW   &kp END      &kp ENTER
-&mt LEFT_SHIFT Z  &kp LC(X)        &kp LC(C)   &kp LC(V)   &kp LC(B)                      &kp SEMICOLON     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
-&trans            &trans           &trans      &trans      &trans             &trans      &trans            &kp PG_UP     &kp PAGE_DOWN  &kp LS(F4)   &kp F2
+&kp ESCAPE        &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(R)   &Doc_Open                      &kp LC(KP_MINUS)  &kp LC(HOME)  &kp LG(LS(S))  &kp LC(END)  &kp BACKSPACE
+&kp LC(A)         &kp LC(S)        &kp LC(D)      &kp LC(N5)  &kp LC(SEMICOLON)              &kp LC(KP_PLUS)   &kp HOME      &kp UP_ARROW   &kp END      &kp ENTER
+&mt LEFT_SHIFT Z  &kp LC(X)        &kp LC(C)      &kp LC(V)   &kp LC(B)                      &kp LS(LC(N))     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
+&trans            &trans           &trans         &trans      &trans             &trans      &trans            &kp PG_UP     &kp PAGE_DOWN  &kp LS(F4)   &kp F2
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
