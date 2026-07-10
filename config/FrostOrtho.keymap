@@ -222,6 +222,27 @@
             bindings = <&kp LANGUAGE_2 &kp RBKT &kp BSLH &kp LEFT_ARROW>;
             label = "BRACKETS";
         };
+
+        sysprocedures: sysprocedures {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp DOUBLE_QUOTES &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp STAR &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp P &kp R &kp O &kp C &kp E &kp D &kp U &kp R &kp E &kp S &kp RET &kp MINUS &kp MINUS &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp T &kp A &kp B &kp L &kp E &kp S &kp RET &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp N &kp A &kp M &kp E &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp SQT &kp PRCNT &kp PRCNT &kp SQT &kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp STAR &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp P &kp R &kp O &kp C &kp E &kp D &kp U &kp R &kp E &kp S &kp RET &kp MINUS &kp MINUS &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp T &kp A &kp B &kp L &kp E &kp S &kp RET &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp N &kp A &kp M &kp E &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp SQT &kp PRCNT &kp PRCNT &kp SQT &kp RET &kp MINUS &kp MINUS &kp S &kp P &kp UNDER &kp H &kp E &kp L &kp P &kp T &kp E &kp X &kp T>;
+            label = "SYSPROCEDURES";
+        };
+
+        muzupasu: muzupasu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(P) &kp AT &kp S &kp S &kp W &kp N0 &kp R &kp D>;
+            label = "MUZUPASU";
+        };
+
+        Sinkura: Sinkura {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp M &kp LS(R) &kp N8 &kp J &kp F &kp POUND &kp V &kp W &kp LS(A) &kp A &kp Y>;
+            label = "SINKURA";
+        };
     };
 
     behaviors {
@@ -288,10 +309,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp LC(PAGE_UP)  &kp PAGE_DOWN  &kp LC(R)   &Doc_Open                      &kp LC(KP_MINUS)  &kp LC(HOME)  &kp LG(LS(S))  &kp LC(END)  &kp BACKSPACE
-&kp LC(A)         &kp LC(S)        &kp LC(D)      &kp LC(N5)  &kp LC(SEMICOLON)              &kp LC(KP_PLUS)   &kp HOME      &kp UP_ARROW   &kp END      &kp ENTER
-&mt LEFT_SHIFT Z  &kp LC(X)        &kp LC(C)      &kp LC(V)   &kp LC(B)                      &kp LS(LC(N))     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
-&trans            &trans           &trans         &trans      &trans             &trans      &trans            &kp PG_UP     &kp PAGE_DOWN  &kp LS(F4)   &kp F2
+&kp ESCAPE        &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(R)   &Doc_Open                      &kp LC(KP_MINUS)  &kp LC(HOME)  &kp LG(LS(S))  &kp LC(END)  &kp BACKSPACE
+&kp LC(A)         &kp LC(S)        &kp LC(D)          &kp LC(N5)  &kp LC(SEMICOLON)              &kp LC(KP_PLUS)   &kp HOME      &kp UP_ARROW   &kp END      &kp ENTER
+&mt LEFT_SHIFT Z  &kp LC(X)        &kp LC(C)          &kp LC(V)   &kp LC(B)                      &kp LS(LC(N))     &kp LEFT      &kp DOWN       &kp RIGHT    &kp DELETE
+&trans            &trans           &trans             &trans      &trans             &trans      &trans            &kp PG_UP     &kp PAGE_DOWN  &kp LS(F4)   &kp F2
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -310,10 +331,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &queryselect  &trans  &trans  &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans  &trans  &trans                      &trans        &trans        &trans        &trans        &trans
-&trans  &trans        &trans  &trans  &trans                      &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans  &trans  &trans          &trans      &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
+&trans  &queryselect  &sysprocedures  &queryupdate  &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans          &trans        &trans                      &muzupasu     &Sinkura      &trans        &trans        &trans
+&trans  &trans        &trans          &trans        &trans                      &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans          &trans        &trans          &trans      &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
