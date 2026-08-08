@@ -223,13 +223,6 @@
             label = "BRACKETS";
         };
 
-        sysprocedures: sysprocedures {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp DOUBLE_QUOTES &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp STAR &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp P &kp R &kp O &kp C &kp E &kp D &kp U &kp R &kp E &kp S &kp RET &kp MINUS &kp MINUS &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp T &kp A &kp B &kp L &kp E &kp S &kp RET &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp N &kp A &kp M &kp E &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp SQT &kp PRCNT &kp PRCNT &kp SQT &kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp STAR &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp P &kp R &kp O &kp C &kp E &kp D &kp U &kp R &kp E &kp S &kp RET &kp MINUS &kp MINUS &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp Y &kp S &kp DOT &kp T &kp A &kp B &kp L &kp E &kp S &kp RET &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp N &kp A &kp M &kp E &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp SQT &kp PRCNT &kp PRCNT &kp SQT &kp RET &kp MINUS &kp MINUS &kp S &kp P &kp UNDER &kp H &kp E &kp L &kp P &kp T &kp E &kp X &kp T>;
-            label = "SYSPROCEDURES";
-        };
-
         muzupasu: muzupasu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -240,8 +233,36 @@
         Sinkura: Sinkura {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp M &kp LS(R) &kp N8 &kp J &kp F &kp POUND &kp V &kp W &kp LS(A) &kp A &kp Y>;
+            bindings = <&kp M &kp LS(R) &kp N8 &kp J &kp F &kp POUND &kp V &kp W &kp LS(A) &kp A &kp Y>;
             label = "SINKURA";
+        };
+
+        SinkuraStart: SinkuraStart {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(S) &kp E &kp C &kp U &kp R &kp E &kp RBKT &kp N0 &kp B &kp EXCL &kp C &kp N7>;
+            label = "SINKURASTART";
+        };
+
+        sp_helptext: sp_helptext {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp P &kp UNDER &kp H &kp E &kp L &kp P &kp T &kp E &kp X &kp T>;
+            label = "SP_HELPTEXT";
+        };
+
+        procedures: procedures {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp Y &kp S &kp DOT &kp P &kp R &kp O &kp C &kp E &kp D &kp U &kp R &kp E &kp S &kp S &kp Y &kp S &kp DOT &kp P &kp R &kp O &kp C &kp E &kp D &kp U &kp R &kp E &kp S &kp RET &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp N &kp A &kp M &kp E &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp SQT &kp PRCNT &kp PRCNT &kp SQT>;
+            label = "PROCEDURES";
+        };
+
+        systables: systables {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp Y &kp S &kp DOT &kp T &kp A &kp B &kp L &kp E &kp S &kp RET &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp N &kp A &kp M &kp E &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp SQT &kp PRCNT &kp PRCNT &kp SQT>;
+            label = "SYSTABLES";
         };
     };
 
@@ -331,10 +352,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &queryselect  &sysprocedures  &queryupdate  &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans          &trans        &trans                      &muzupasu     &Sinkura      &trans        &trans        &trans
-&trans  &trans        &trans          &trans        &trans                      &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans          &trans        &trans          &trans      &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
+&trans  &queryselect  &trans      &queryupdate  &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &procedures   &systables  &trans        &trans                      &muzupasu     &Sinkura      &SinkuraStart  &trans        &trans
+&trans  &trans        &trans      &trans        &trans                      &trans        &trans        &trans         &trans        &bt BT_CLR
+&trans  &trans        &trans      &trans        &trans          &trans      &trans        &trans        &trans         &trans        &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
