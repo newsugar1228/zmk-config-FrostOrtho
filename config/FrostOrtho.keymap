@@ -129,6 +129,11 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <36 37>;
         };
+
+        mstsc {
+            bindings = <&mstsc>;
+            key-positions = <4 14>;
+        };
     };
 
     macros {
@@ -164,9 +169,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LC(C)>,
-                <&macro_wait_time 750>,
+                <&macro_wait_time 1000>,
                 <&kp LG(R)>,
-                <&macro_wait_time 750>,
+                <&macro_wait_time 1000>,
                 <&kp LC(V)>,
                 <&macro_wait_time 750>,
                 <&kp KP_ENTER>;
@@ -209,13 +214,6 @@
             label = "QUERYSELECT";
         };
 
-        queryupdate: queryupdate {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp B &kp E &kp G &kp I &kp N &kp SPACE &kp T &kp R &kp A &kp N &kp RET &kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp STAR &kp SPACE &kp I &kp N &kp T &kp O &kp SPACE &kp H &kp O &kp G &kp E &kp UNDER &kp LS(Y) &kp LS(Y) &kp LS(M) &kp LS(M) &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp H &kp O &kp G &kp E &kp RET &kp RET &kp U &kp P &kp D &kp A &kp T &kp E &kp SPACE &kp A &kp RET &kp LS(S) &kp LS(E) &kp LS(T) &kp SPACE &kp H &kp O &kp H &kp E &kp SPACE &kp EQUAL &kp SPACE &kp H &kp O &kp H &kp E &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp H &kp O &kp G &kp E &kp RET &kp RET &kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE &kp STAR &kp SPACE &kp RET &kp F &kp R &kp O &kp M &kp SPACE &kp H &kp O &kp G &kp E &kp RET &kp RET &kp R &kp O &kp L &kp L &kp B &kp A &kp C &kp K &kp RET &kp MINUS &kp MINUS &kp C &kp O &kp M &kp M &kp I &kp T &kp RET>;
-            label = "QUERYUPDATE";
-        };
-
         brackets: brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -226,7 +224,7 @@
         muzupasu: muzupasu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(P) &kp AT &kp S &kp S &kp W &kp N0 &kp R &kp D>;
+            bindings = <&none &kp LS(P) &kp RIGHT_BRACKET &kp S &kp S &kp W &kp N0 &kp R &kp D>;
             label = "MUZUPASU";
         };
 
@@ -263,6 +261,17 @@
             #binding-cells = <0>;
             bindings = <&kp S &kp Y &kp S &kp DOT &kp T &kp A &kp B &kp L &kp E &kp S &kp RET &kp W &kp H &kp E &kp R &kp E &kp SPACE &kp N &kp A &kp M &kp E &kp SPACE &kp L &kp I &kp K &kp E &kp SPACE &kp SQT &kp PRCNT &kp PRCNT &kp SQT>;
             label = "SYSTABLES";
+        };
+
+        mstsc: mstsc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 1000>,
+                <&kp M &kp S &kp T &kp S &kp C &kp KP_ENTER>;
+
+            label = "MSTSC";
         };
     };
 
@@ -308,10 +317,10 @@
 
         default_layer {
             bindings = <
-&lt 4 Q           &kp W         &kp E         &kp R               &kp T                          &kp Y        &mt LS(LEFT_CONTROL) U  &kp I         &kp O           &lt 3 P
-&kp A             &kp S         &kp D         &mt LEFT_SHIFT F    &kp G                          &kp H        &mt RIGHT_SHIFT J       &mt LCTRL K   &mt LEFT_GUI L  &lt 5 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V               &kp B                          &kp N        &kp M                   &kp COMMA     &kp PERIOD      &mt RSHIFT SLASH
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_MUHENKAN  &lt 2 SPACE  &lt 3 DELETE      &lt 2 ENTER  &kp BACKSPACE           &kp QUESTION  &kp EXCL        &muhenkan_At
+&lt 4 Q           &kp W         &kp E         &kp R               &kp T                          &kp Y        &mt LS(LEFT_CONTROL) U  &kp I         &kp O       &lt 3 P
+&kp A             &kp S         &kp D         &mt LEFT_SHIFT F    &kp G                          &kp H        &kp J                   &kp K         &kp L       &lt 5 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V               &kp B                          &kp N        &kp M                   &kp COMMA     &kp PERIOD  &mt RSHIFT SLASH
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_MUHENKAN  &lt 2 SPACE  &lt 3 DELETE      &lt 2 ENTER  &kp BACKSPACE           &kp QUESTION  &kp EXCL    &muhenkan_At
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -352,10 +361,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans  &queryselect  &trans      &queryupdate  &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &procedures   &systables  &trans        &trans                      &muzupasu     &Sinkura      &SinkuraStart  &trans        &trans
-&trans  &trans        &trans      &trans        &trans                      &trans        &trans        &trans         &trans        &bt BT_CLR
-&trans  &trans        &trans      &trans        &trans          &trans      &trans        &trans        &trans         &trans        &bt BT_CLR_ALL
+&trans  &queryselect  &trans      &none   &kp KP_NUMLOCK              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &procedures   &systables  &trans  &trans                      &muzupasu     &Sinkura      &SinkuraStart  &trans        &trans
+&trans  &trans        &trans      &trans  &trans                      &trans        &trans        &trans         &trans        &bt BT_CLR
+&trans  &trans        &trans      &trans  &trans          &trans      &trans        &trans        &trans         &trans        &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
